@@ -1,7 +1,7 @@
 import  { useState } from 'react';
 import {  Nav } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { RiHome7Fill, RiAddCircleFill, RiGroupFill, RiStackFill, RiQuestionFill, RiLogoutCircleRLine, RiDashboardFill } from 'react-icons/ri';
+
 import '../../style/style.css'; 
 
 
@@ -18,30 +18,7 @@ function Sidebar() {
 
     return (
             <div className={`sidebar ${sidebarActive ? 'activeBar' : ''}`}>
-            <Nav className="flex-column">
-                    <Nav.Item href="#" className="nav-links" onClick={()=> navigateByUrl('/admindashboard')}>
-                        <RiHome7Fill className="ri" /> 
-                </Nav.Item>
-            </Nav>
-            <div className="bottomList">
-                <Nav className="flex-column">
-                <Nav.Item href="#" className="nav-links" onClick={()=> navigateByUrl('/adminaccept')}>
-                            <RiQuestionFill className="ri" /> 
-                    </Nav.Item>
-                    <Nav.Item className="nav-links" onClick={()=> navigateByUrl('/report')}>
-                            <RiAddCircleFill className="ri" /> 
-                    </Nav.Item>
-                    <Nav.Item className="nav-links" onClick={()=> navigateByUrl('/jobmanagment')}>
-                            <RiGroupFill className="ri" /> 
-                    </Nav.Item>
-                    <Nav.Item className="nav-links" onClick={()=> navigateByUrl('/jobmanagment')}>
-                            <RiStackFill className="ri" /> 
-                    </Nav.Item>
-                    <Nav.Item className='nav-links'>
-                            <RiLogoutCircleRLine className="ri" /> 
-                    </Nav.Item>
-                </Nav>
-            </div>
+       
             </div>
     );
 }
